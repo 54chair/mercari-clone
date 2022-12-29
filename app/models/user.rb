@@ -8,4 +8,6 @@ class User < ApplicationRecord
          :lockable,
          :timeoutable,
          :trackable
+  validates :nickname, presence: true
+  validates :gender, presence: true
 end
