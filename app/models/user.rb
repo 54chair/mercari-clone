@@ -10,6 +10,7 @@ class User < ApplicationRecord
          :trackable
   validates :nickname, presence: true
   validates :gender, presence: true
+  before_validation :skip_confirmation!, if: :new_record?
 
   has_one :user_information, dependent: :destroy
 
