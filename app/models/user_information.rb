@@ -8,7 +8,7 @@ class UserInformation < ApplicationRecord
   validates :given_name, presence: true
   validates :given_name, format: { with: ZENKAKU_REGEXP, message: "は全角で入力してください" }, allow_blank: true
   validates :family_name_kana, presence: true
-  validates :family_name_kana, presence: true, format: { with: ZENKAKU_KANA _REGEXP, message: "は全角で入力してください" }, allow_blank: true
+  validates :family_name_kana, presence: true, format: { with: ZENKAKU_KANA_REGEXP, message: "は全角で入力してください" }, allow_blank: true
   validates :given_name_kana, presence: true
   validates :given_name_kana, format: { with: ZENKAKU_KANA_REGEXP, message: "は全角で入力してください" }, allow_blank: true
   validates :birth_date, presence: true
