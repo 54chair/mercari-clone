@@ -11,6 +11,8 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   validates :gender, presence: true
 
+  has_one :user_information, dependent: :destroy
+
   enum gender: {
       unanswered: 0,
       male: 1,
